@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size:40px; height:3cm">
+      <b> Register your account</b></ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Login ID</ion-label>
+    <ion-input style="height:1.5cm; font-size:30px"></ion-input>
+  </ion-item>
+  <hr />
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" style="height:1.5cm; font-size:30px"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input type="password" style="height:1.5cm; font-size:30px"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email Address</ion-label>
+    <ion-input type="password" style="height:1.5cm; font-size:30px"></ion-input>
+  </ion-item>
+  <div class="container">
+    <p>We only serve humans!</p>
+    <label for="check">
+      <div class="input-container icon-padding-start">
+        <input type="checkbox" class="checkbox" id="check" />
+        <span class="checkbox-text"> I'm not a robot</span>
+      </div>
+    </label>
+
+    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" />
+    <span class="recaptcha">reCAPTCHA</span>
+    <br />
+    <a href="#">Privacy</a>
+    <span class="dash">-</span>
+    <a href="#">Terms</a>
+  </div>
+
+  <ion-button
+    color="success"
+    style="height:1.5cm; width:10cm; font-size:20px; margin-left: 40px "
+    >Register Account</ion-button
+  >
+</ion-content>
