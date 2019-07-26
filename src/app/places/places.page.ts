@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { HttpService } from "../http.service";
 
 @Component({
   selector: "app-places",
@@ -6,30 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./places.page.scss"]
 })
 export class PlacesPage implements OnInit {
-  places = [
-    {
-      id: 1,
-      logo: "assets/malaysia.png",
-      name: "Malaysia"
-    },
-    {
-      id: 2,
-      logo: "assets/macau.jpeg",
-      name: "Macau"
-    },
-    {
-      id: 3,
-      logo: "assets/singapore.png",
-      name: "Singapore"
-    },
-    {
-      id: 4,
-      logo: "assets/australia.png",
-      name: "Australia  "
-    }
-  ];
+  places;
 
-  constructor() {}
+  constructor(private http: HttpService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.http.getPlaces().subscribe(resp => {
+      this.places = resp;
+      console.log(resp);
+    });
+  }
 }
